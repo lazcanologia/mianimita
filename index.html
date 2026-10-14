@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Animita</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+
+<body>
+
+
+    <video class="video-fondo" autoplay muted loop playsinline disablepictureinpicture>
+
+        <source src="../02_imagenes/cielo.mp4" type="video/mp4">
+
+    </video>
+
+
+
+<div class="contenido-pagina">
+
+
+    <h1>
+        Construye tu animita para seguir presente desde el más allá
+    </h1>
+
+
+
+    <div class="contenedor">
+
+
+        <aside class="pensamiento">
+
+            <div class="texto-pensamiento" id="texto-pensamiento"></div>
+
+        </aside>
+
+
+
+
+        <!-- DIÁLOGO CON LA ANIMITA -->
+
+        <div class="dialogo-animita" id="dialogo-animita">
+
+
+            <div id="pregunta-dialogo"></div>
+
+
+            <textarea id="respuesta-usuario"></textarea>
+
+
+            <button id="guardar-respuesta">
+
+                Guardar respuesta
+
+            </button>
+
+
+        </div>
+
+
+
+
+
+        <!-- BOTÓN FINAL -->
+
+        <div class="contenedor-concluir">
+
+
+            <button id="concluir-animita">
+
+                Dejarla permanecer
+
+            </button>
+
+
+        </div>
+
+
+
+
+
+        <!-- ANIMITA -->
+
+        <section class="zona-trabajo">
+
+
+            <div class="animita" id="zona-animita">
+
+
+                <img
+
+                    src="../02_imagenes/animita_base.png"
+
+                    alt="Animita base"
+
+                    draggable="false"
+
+                >
+
+
+
+                <div class="interior-ritual"></div>
+
+
+                <div class="luz-vela"></div>
+
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+
+        <!-- PANEL ANTIGUO (OCULTO POR CSS) -->
+
+        <aside class="epicrisis">
+
+
+            <h2>
+                Epicrisis de la animita
+            </h2>
+
+
+            <p>
+                Construye tu animita para seguir presente desde el más allá.
+            </p>
+
+
+            <hr>
+
+
+            <p>
+                Objetos incorporados:
+            </p>
+
+
+            <ol id="lista-ofrendas">
+
+
+                <li class="mensaje-vacio">
+
+                    Aún no hay objetos
+
+                </li>
+
+
+            </ol>
+
+
+        </aside>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- OFRENDAS -->
+
+    <div class="espacio-memoria"></div>
+
+
+
+    <section class="catalogo">
+
+
+        <h2>
+
+            Ofrendas disponibles
+
+        </h2>
+
+
+        <p>
+
+            Arrastra los objetos hacia la animita. Puedes moverlos después.
+
+        </p>
+
+
+
+        <div id="bandeja-ofrendas" class="bandeja-ofrendas"></div>
+
+
+
+    </section>
+
+
+
+</div>
+
+
+
+
+
+<!-- MENSAJE SACRALIZACIÓN -->
+
+<div id="mensaje-sacralizado">
+
+    objeto sacralizado
+
+</div>
+
+
+
+
+
+<!-- TRANSICIÓN FINAL -->
+
+<div class="transicion-final" id="transicion-final">
+
+
+    <div class="frase-final">
+
+        Los objetos sacralizados son una extensión de una vida sensible
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- FIRMA DE MEMORIA -->
+
+<div class="firma-memoria" id="firma-memoria">
+
+
+    <div class="contenido-firma">
+
+
+        <h2>
+
+            Toda memoria necesita un nombre para permanecer
+
+        </h2>
+
+
+        <p>
+
+            ¿Cómo deseas firmar esta animita?
+
+        </p>
+
+
+
+        <input
+
+            type="text"
+
+            id="nombre-usuario"
+
+            placeholder="Nombre o seudónimo"
+
+        >
+
+
+
+
+        <div class="opciones-identidad">
+
+
+            <label>
+
+                <input
+
+                    type="radio"
+
+                    name="identidad"
+
+                    value="nombre"
+
+                    checked
+
+                >
+
+                Mostrar mi nombre
+
+            </label>
+
+
+
+
+            <label>
+
+                <input
+
+                    type="radio"
+
+                    name="identidad"
+
+                    value="seudonimo"
+
+                >
+
+                Mostrar sólo mi seudónimo
+
+            </label>
+
+
+
+
+            <label>
+
+                <input
+
+                    type="radio"
+
+                    name="identidad"
+
+                    value="anonimo"
+
+                >
+
+                Permanecer anónimo
+
+            </label>
+
+
+
+        </div>
+
+
+
+
+        <button id="guardar-identidad">
+
+            Continuar
+
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- EPICRISIS FINAL -->
+
+<div class="epicrisis-final" id="epicrisis-final">
+
+    <div class="documento-epicrisis">
+
+        <div class="cabecera-archivo">
+
+            <p class="titulo-archivo">
+                Archivo de permanencia
+            </p>
+
+            <p id="numero-registro">
+                Epicrisis Nº 000001
+            </p>
+
+            <p id="fecha-creacion"></p>
+
+        </div>
+
+
+        <h1>
+            Epicrisis de una animita
+        </h1>
+
+
+        <h3 id="nombre-epicrisis">
+            Sin nombre
+        </h3>
+
+
+        <p id="creador-epicrisis">
+            Creada por: Anónimo
+        </p>
+
+
+        <div class="imagen-epicrisis">
+
+            <img
+                id="imagen-animita-final"
+                alt="Registro de la animita"
+            >
+
+        </div>
+
+
+        <h2>
+            Objetos sacralizados
+        </h2>
+
+
+        <div id="registro-epicrisis"></div>
+
+
+        <p class="frase-epicrisis">
+
+            Los objetos sacralizados son una extensión de una vida sensible.
+
+        </p>
+
+        <button id="descargar-pdf" class="no-imprimir">
+
+    Guardar epicrisis
+
+</button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
