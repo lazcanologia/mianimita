@@ -62,7 +62,7 @@ function crearOfrenda(ofrenda) {
     objeto.style.animationDuration =
     `${4 + Math.random() * 3}s`;
 
-    objeto.src = `../02_imagenes/${ofrenda.archivo}`;
+    objeto.src = `02_imagenes/${ofrenda.archivo}`;
     objeto.alt = ofrenda.nombre;
     objeto.title = ofrenda.nombre;
     objeto.classList.add("objeto");
@@ -324,7 +324,7 @@ if (bandeja) {
     );
 }
 
-fetch("../02_imagenes/pensamiento.txt")
+fetch("02_imagenes/pensamiento.txt")
     .then(respuesta => respuesta.text())
     .then(texto => {
 
